@@ -7,9 +7,7 @@ app = Celery("test", broker="redis://0.0.0.0:6379/0", backend="redis://0.0.0.0:6
 
 
 BASE_URL = "https://zakupki.gov.ru"
-SEARCH_URL = (
-    "https://zakupki.gov.ru/epz/order/extendedsearch/results.html?fz44=on&pageNumber={}"
-)
+SEARCH_URL = BASE_URL + "/epz/order/extendedsearch/results.html?fz44=on&pageNumber={}"
 HEADERS = {
     "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 YaBrowser/25.2.0.0 Safari/537.36"
 }
